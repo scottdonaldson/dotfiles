@@ -21,6 +21,7 @@ export PATH
 PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
 export PATH
 
+alias python='python3'
 # Postgres
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
@@ -33,7 +34,18 @@ alias cc0='/Users/scottdonaldson/cc0/bin/cc0'
 alias coin='/Users/scottdonaldson/cc0/bin/coin'
 
 # connect to EC2 WordPress server
-alias wpconnect='ssh -i "/Users/scottdonaldson/wp.pem" ec2-user@ec2-54-85-137-181.compute-1.amazonaws.com'
+alias wpconnect='ssh -i "/Users/scottdonaldson/.ssh/wordpress.pem" ec2-user@ec2-54-85-137-181.compute-1.amazonaws.com'
 
 # SSH into andrew.cmu.edu
 alias andrew='ssh sdonalds@unix.andrew.cmu.edu'
+
+# TORCH
+export PATH=$PATH:/Users/scottdonaldson/torch/install/bin
+
+# hcoop
+alias hcoop='ssh scottpdo@hcoop.net'
+
+if [ -z $DISPLAY ]; then export DISPLAY=:0.0; fi
+
+# yarn
+PATH="$PATH:`yarn global bin`" 
